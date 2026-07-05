@@ -1,8 +1,9 @@
 /* ===== Sola 2026 Story – Blaues Magazin ===== */
 :root {
-  --rot: #E2001A;
-  --blau: #00417A;
-  --blau-tief: #00335F;
+  /* Offizielle Cevi-Farben: Pantone Red 032 / Pantone Blue 072 */
+  --rot: #EF3340;
+  --blau: #10069F;
+  --blau-tief: #0A0470;
   --gold: #FFD24D;
   --ink: #141619;
   --papier: #FDFDFB;
@@ -83,5 +84,4 @@ a.row:hover { background: #f4f6f9; }
 .galerie a { display: block; }
 
 .kapitel-nav {
-  display: flex; justify-content: space-between; gap: 10px;
-  padding: 22px 40px 34px; font-size: .8rem; le
+  display: flex; justify-content: space-
