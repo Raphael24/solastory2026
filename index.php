@@ -84,4 +84,8 @@ endforeach; ?>
     el.textContent = (t > 0 ? t + ' Tag' + (t > 1 ? 'en ' : ' ') : '') + p(h) + ':' + p(m) + ':' + p(sec);
     setTimeout(tick, 1000);
   }
- 
+  tick();
+})();
+</script>
+</body>
+</html>
