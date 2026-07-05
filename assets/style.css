@@ -84,4 +84,5 @@ a.row:hover { background: #f4f6f9; }
 .galerie a { display: block; }
 
 .kapitel-nav {
-  display: flex; justify-content: space-
+  display: flex; justify-content: space-between; gap: 10px;
+  padding: 22px 40px 34px; font-size: .8rem; le
