@@ -6,8 +6,8 @@ function e($s) {
 }
 
 // ---------- Einstellungen ----------
-// freischalt_modus: 0 = Kapitel öffnet um 00:00 am Tag selbst
-//                   1 = Kapitel öffnet um Mitternacht NACH dem Tag
+// freischalt_modus: 0 = Kapitel öffnet um 21:00 am Tag selbst
+//                   1 = Kapitel öffnet um 21:00 am Tag NACH dem Tag
 function einstellungen_laden() {
     $std = ['freischalt_modus' => 0];
     $f = DATA_DIR . '/einstellungen.json';
@@ -31,7 +31,7 @@ function tag_datum($tag) {
 function freischalt_zeit($tag) {
     $e = einstellungen_laden();
     $offset = ($tag - 1) + (int)$e['freischalt_modus'];
-    return (new DateTime(LAGER_START . ' 00:00:00'))->modify('+' . $offset . ' days')->getTimestamp();
+    return (new DateTime(LAGER_START . ' 21:00:00'))->modify('+' . $offset . ' days')->getTimestamp();
 }
 
 function ist_admin() {

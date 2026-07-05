@@ -31,7 +31,7 @@ for ($i = 1; $i <= ANZAHL_TAGE; $i++) {
 <section class="kopf">
   <div class="kicker">Ein Kapitel pro Tag</div>
   <h1>Der Krimi von <span>Churwalden</span></h1>
-  <p>Jeden Tag um Mitternacht öffnet sich ein neues Kapitel der Lagergeschichte.</p>
+  <p>Jeden Tag um 21:00 Uhr öffnet sich ein neues Kapitel der Lagergeschichte.</p>
   <?php if ($naechste !== null): ?>
   <div class="next"><span class="dot"></span> Nächstes Kapitel in <span id="countdown" data-ziel="<?= $naechste * 1000 ?>">…</span></div>
   <?php endif; ?>
@@ -59,7 +59,7 @@ for ($i = 1; $i <= ANZAHL_TAGE; $i++) {
   <div class="row locked">
     <span class="num"><?= $nr2 ?></span>
     <div><h3>Noch verschlossen</h3>
-    <div class="meta"><?= $datum ?> · Ab Mitternacht</div></div>
+    <div class="meta"><?= $datum ?> · Ab 21:00 Uhr</div></div>
     <span class="arrow">🔒</span>
   </div>
     <?php endif;
