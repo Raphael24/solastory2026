@@ -2,7 +2,7 @@
 // ===== Sola 2026 Story – Konfiguration =====
 
 // WICHTIG: Passwort vor dem Hochladen ändern!
-define('ADMIN_PASSWORT', 'sola2026-bitte-aendern');
+define('ADMIN_PASSWORT', 'Sola.2026');
 
 // Lagerdaten
 define('LAGER_START', '2026-07-05');   // erster Lagertag
