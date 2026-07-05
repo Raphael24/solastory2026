@@ -22,7 +22,7 @@ for ($i = 1; $i <= ANZAHL_TAGE; $i++) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sola 2026 – Die Story | Cevi Weinfelden</title>
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=<?= filemtime(__DIR__ . '/assets/style.css') ?>">
 </head>
 <body>
 <div class="blatt">
@@ -84,8 +84,4 @@ endforeach; ?>
     el.textContent = (t > 0 ? t + ' Tag' + (t > 1 ? 'en ' : ' ') : '') + p(h) + ':' + p(m) + ':' + p(sec);
     setTimeout(tick, 1000);
   }
-  tick();
-})();
-</script>
-</body>
-</html>
+ 
