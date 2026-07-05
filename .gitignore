@@ -1,0 +1,4 @@
+# Inhalte bleiben auf dem Server (Story-Spoiler & Uploads gehören nicht ins Repo)
+data/kapitel/
+data/bilder/
+data/einstellungen.json
