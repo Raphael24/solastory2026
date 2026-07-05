@@ -80,7 +80,7 @@ $einstellungen = einstellungen_laden();
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Admin | Sola 2026 Story</title>
 <style>
-  :root { --rot:#E2001A; --blau:#00417A; --ink:#141619; --papier:#fafaf7; --linie:#e3e2dc; }
+  :root { --rot:#d5263b; --blau:#10069F; --ink:#141619; --papier:#fafaf7; --linie:#e3e2dc; }
   * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',Helvetica,Arial,sans-serif; }
   body { background:var(--papier); color:var(--ink); }
   .topbar { display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid var(--linie); font-size:.85rem; letter-spacing:2px; text-transform:uppercase; }
