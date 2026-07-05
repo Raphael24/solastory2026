@@ -197,7 +197,7 @@ $einstellungen = einstellungen_laden();
         <div class="meta"><?= tag_datum($i)->format('j.n.Y') ?> · <?= count($k['bilder']) ?> Bild(er)</div>
       </div>
       <span class="status <?= !hat_inhalt($k) ? 'leer' : ($offen ? 'offen' : 'zu') ?>">
-        <?= !hat_inhalt($k) ? 'Leer' : ($offen ? 'Freigeschaltet' : 'Wartet auf Mitternacht') ?>
+        <?= !hat_inhalt($k) ? 'Leer' : ($offen ? 'Freigeschaltet' : 'Wartet auf 21:00 Uhr') ?>
       </span>
       <a class="btn" href="?tag=<?= $i ?>">Bearbeiten</a>
     </div>
@@ -211,11 +211,11 @@ $einstellungen = einstellungen_laden();
       <input type="hidden" name="aktion" value="modus">
       <p style="margin-top:12px"><label style="display:inline;text-transform:none;letter-spacing:0;font-size:.95rem;color:var(--ink)">
         <input type="radio" name="freischalt_modus" value="0" <?= $einstellungen['freischalt_modus'] == 0 ? 'checked' : '' ?>>
-        Um 00:00 Uhr <strong>am Tag selbst</strong> (Tag 1 ist ab 5.7. 00:00 sichtbar)
+        Um 21:00 Uhr <strong>am Tag selbst</strong> (Tag 1 ist ab 5.7. 21:00 sichtbar)
       </label></p>
       <p style="margin-top:8px"><label style="display:inline;text-transform:none;letter-spacing:0;font-size:.95rem;color:var(--ink)">
         <input type="radio" name="freischalt_modus" value="1" <?= $einstellungen['freischalt_modus'] == 1 ? 'checked' : '' ?>>
-        Um Mitternacht <strong>nach dem Tag</strong> (Tag 1 wird in der Nacht auf den 6.7. sichtbar)
+        Um 21:00 Uhr <strong>am Tag danach</strong> (Tag 1 wird am 6.7. um 21:00 sichtbar)
       </label></p>
       <p style="margin-top:14px"><button class="btn" type="submit">Speichern</button></p>
     </form>

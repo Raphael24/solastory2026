@@ -8,7 +8,7 @@ define('ADMIN_PASSWORT', 'Sola.2026');
 define('LAGER_START', '2026-07-05');   // erster Lagertag
 define('ANZAHL_TAGE', 7);              // 5.7. bis 11.7.2026
 
-// Zeitzone (für die Mitternacht-Freischaltung)
+// Zeitzone (für die Freischaltung um 21:00 Uhr)
 date_default_timezone_set('Europe/Zurich');
 
 // Pfade

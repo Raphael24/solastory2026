@@ -26,7 +26,7 @@ $k     = $frei ? kapitel_laden($tag) : null;
 <section class="gesperrt">
   <div class="schloss">🔒</div>
   <h1>Dieses Kapitel ist noch verschlossen</h1>
-  <p>Tag <?= $tag ?> (<?= $datum ?>) wird um Mitternacht freigeschaltet.</p>
+  <p>Tag <?= $tag ?> (<?= $datum ?>) wird um 21:00 Uhr freigeschaltet.</p>
   <div class="next"><span class="dot"></span> Freischaltung in <span id="countdown" data-ziel="<?= freischalt_zeit($tag) * 1000 ?>">…</span></div>
   <p style="margin-top:30px"><a href="index.php">← Zurück zur Übersicht</a></p>
 </section>

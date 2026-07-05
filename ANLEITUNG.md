@@ -3,7 +3,7 @@
 ## Was ist das?
 
 Eine Website mit einem Kapitel pro Lagertag (5.7.–11.7.2026). Jedes Kapitel
-wird automatisch um Mitternacht freigeschaltet — serverseitig, also nicht
+wird automatisch um 21:00 Uhr freigeschaltet — serverseitig, also nicht
 austricksbar. Inhalte pflegst du über das Admin-Dashboard direkt im Browser.
 
 ## Vor dem Hochladen: Passwort ändern!
@@ -31,8 +31,8 @@ hPanel → Websites → PHP-Konfiguration.
 - Pro Tag: Titel + Text eingeben, Bilder hochladen, Speichern.
   Leerzeile im Text = neuer Absatz.
 - **Freischalt-Zeitpunkt** im Dashboard wählbar:
-  - *Am Tag selbst* (00:00): Kapitel von Tag 2 erscheint in der Nacht vom 5. auf den 6.7.
-  - *Nach dem Tag*: Kapitel von Tag 1 erscheint in der Nacht vom 5. auf den 6.7.
+  - *Am Tag selbst* (21:00): Kapitel von Tag 1 erscheint am 5.7. um 21:00 Uhr.
+  - *Am Tag danach* (21:00): Kapitel von Tag 1 erscheint am 6.7. um 21:00 Uhr.
 - Als eingeloggter Admin siehst du immer alle Kapitel (praktisch für die Vorschau).
 
 ## Sicherheit
