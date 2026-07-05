@@ -1,76 +1,87 @@
-/* ===== Sola 2026 Story – Modern Editorial ===== */
+/* ===== Sola 2026 Story – Blaues Magazin ===== */
 :root {
   --rot: #E2001A;
   --blau: #00417A;
+  --blau-tief: #00335F;
+  --gold: #FFD24D;
   --ink: #141619;
-  --papier: #fafaf7;
-  --linie: #e3e2dc;
+  --papier: #FDFDFB;
+  --linie: #e6e4de;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: var(--papier); color: var(--ink); font-family: 'Segoe UI', Helvetica, Arial, sans-serif; }
+body {
+  background: linear-gradient(160deg, var(--blau) 0%, var(--blau-tief) 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  padding: 40px 16px;
+}
 a { color: inherit; text-decoration: none; }
 
-.topbar {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 20px 36px; border-bottom: 1px solid var(--linie);
-  font-size: .85rem; letter-spacing: 2px; text-transform: uppercase;
+/* ---- Magazinblatt ---- */
+.blatt {
+  max-width: 820px; margin: 0 auto;
+  background: var(--papier); border-radius: 14px;
+  box-shadow: 0 30px 80px rgba(0, 10, 25, .45);
+  overflow: hidden;
 }
-.topbar b { color: var(--rot); }
+.band {
+  background: var(--rot); color: #fff; text-align: center;
+  padding: 10px; font-size: .75rem; letter-spacing: 4px; text-transform: uppercase;
+}
+.band a { color: #fff; }
 
-/* ---- Startseite ---- */
-.hero { padding: 80px 36px 60px; max-width: 900px; }
-.hero .kicker { color: var(--rot); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: .8rem; }
-.hero h1 { font-family: Georgia, serif; font-size: clamp(2.6rem, 8vw, 5rem); line-height: 1.05; margin: 14px 0 20px; }
-.hero h1 em { font-style: italic; color: var(--blau); }
-.hero p { font-size: 1.1rem; color: #555; max-width: 540px; }
+/* ---- Kopf / Startseite ---- */
+.kopf { text-align: center; padding: 56px 30px 40px; border-bottom: 1px solid var(--linie); }
+.kicker { color: var(--rot); font-weight: 700; letter-spacing: 4px; text-transform: uppercase; font-size: .75rem; }
+.kopf h1 { font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.04; margin: 14px 0 12px; }
+.kopf h1 em { font-style: italic; color: var(--blau); }
+.kopf p { color: #666; max-width: 460px; margin: 0 auto; }
 
 .next {
-  display: inline-flex; align-items: center; gap: 10px; margin-top: 28px;
-  padding: 12px 20px; border: 1.5px solid var(--ink); border-radius: 2px;
-  font-size: .85rem; letter-spacing: 1px; text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 26px;
+  padding: 11px 22px; background: var(--blau); color: #fff; border-radius: 3px;
+  font-size: .8rem; letter-spacing: 2px; text-transform: uppercase;
 }
-.next .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rot); animation: pulse 1.5s infinite; }
+.next .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); animation: pulse 1.5s infinite; }
 @keyframes pulse { 50% { opacity: .3; } }
 
-.chapters { border-top: 1px solid var(--linie); }
+/* ---- Kapitelliste ---- */
 .row {
-  display: grid; grid-template-columns: 90px 1fr auto; align-items: center; gap: 24px;
-  padding: 26px 36px; border-bottom: 1px solid var(--linie); transition: background .15s;
+  display: grid; grid-template-columns: 88px 1fr auto; align-items: center; gap: 22px;
+  padding: 26px 40px; border-bottom: 1px solid var(--linie); transition: background .15s;
+  text-align: left;
 }
-a.row:hover { background: #f1f0ea; }
-.num { font-family: Georgia, serif; font-size: 2.4rem; color: var(--rot); }
-.row h3 { font-family: Georgia, serif; font-size: 1.4rem; margin-bottom: 4px; }
-.row .meta { font-size: .78rem; color: #888; letter-spacing: 1px; text-transform: uppercase; }
-.row .arrow { font-size: 1.4rem; color: var(--blau); }
-.row.locked { color: #b6b4ac; }
-.row.locked .num { color: #d8d6ce; }
-.row.locked .arrow { color: #c9c7bf; }
+a.row:hover { background: #f4f6f9; }
+.num { font-size: 2.4rem; color: var(--rot); }
+.row h3 { font-size: 1.4rem; margin-bottom: 4px; }
+.row .meta { font-size: .75rem; color: #999; letter-spacing: 1px; text-transform: uppercase; }
+.row .arrow { color: var(--blau); font-size: 1.3rem; }
+.row.locked { color: #b9b7b0; }
+.row.locked .num { color: #dddbd4; }
+.row.locked .arrow { color: #cfcdc6; }
+@media (max-width: 540px) {
+  .row { padding: 20px 22px; grid-template-columns: 60px 1fr auto; gap: 14px; }
+  .num { font-size: 1.8rem; }
+}
 
 /* ---- Kapitelseite ---- */
-.artikel { max-width: 760px; margin: 0 auto; padding: 70px 24px 60px; }
-.artikel .kicker { color: var(--rot); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: .8rem; }
-.artikel h1 { font-family: Georgia, serif; font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.08; margin: 12px 0 30px; }
-.artikel .inhalt p { font-family: Georgia, serif; font-size: 1.15rem; line-height: 1.75; margin-bottom: 1.3em; }
-.artikel .inhalt h3 { font-family: Georgia, serif; font-size: 1.3rem; margin: 2em 0 .8em; color: var(--blau); }
-.artikel .inhalt h3::before { content: '— '; color: var(--rot); }
+.artikel { max-width: 680px; margin: 0 auto; padding: 56px 30px 50px; }
+.artikel .kicker { text-align: center; display: block; }
+.artikel h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.08; margin: 12px 0 34px; text-align: center; }
+.artikel .inhalt p { font-size: 1.12rem; line-height: 1.75; margin-bottom: 1.3em; }
 .artikel .inhalt p:first-of-type::first-letter {
   font-size: 3.4em; float: left; line-height: .85; padding-right: 10px; color: var(--rot);
 }
+.artikel .inhalt h3 { font-size: 1.3rem; margin: 2em 0 .8em; color: var(--blau); text-align: center; }
+.artikel .inhalt h3::before { content: '— '; color: var(--rot); }
+.artikel .inhalt h3::after { content: ' —'; color: var(--rot); }
 
-.galerie { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin-top: 40px; }
-.galerie img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; display: block; }
+.galerie { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin-top: 40px; }
+.galerie img { width: 100%; height: 190px; object-fit: cover; border-radius: 6px; display: block; }
 .galerie a { display: block; }
 
 .kapitel-nav {
-  display: flex; justify-content: space-between; max-width: 760px; margin: 0 auto;
-  padding: 0 24px 70px; font-size: .85rem; letter-spacing: 1px; text-transform: uppercase;
-}
-.kapitel-nav a { color: var(--blau); border-bottom: 1.5px solid var(--blau); padding-bottom: 2px; }
-
-/* ---- Gesperrt-Seite ---- */
-.gesperrt { max-width: 640px; margin: 0 auto; padding: 110px 24px; text-align: center; }
-.gesperrt .schloss { font-size: 3rem; }
-.gesperrt h1 { font-family: Georgia, serif; font-size: 2.4rem; margin: 18px 0 10px; }
-.gesperrt p { color: #666; margin-bottom: 26px; }
-
-footer { padding: 40px 36px; font-size: .8rem; color: #999; letter-spacing: 1px; }
+  display: flex; justify-content: space-between; gap: 10px;
+  padding: 22px 40px 34px; font-size: .8rem; le
